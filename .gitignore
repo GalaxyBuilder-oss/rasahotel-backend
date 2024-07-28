@@ -1,0 +1,17 @@
+#Build Output
+target/
+
+#Log Files
+logs/
+*.log
+*.txt
+
+# Test Output
+**/test-results/
+
+#Generated Files
+*.class
+*.jar
+
+#Vscode folder
+.Vscodescode
