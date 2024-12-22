@@ -38,7 +38,7 @@ public class SpringSecurity {
                                                 .authenticationEntryPoint(new CustomUnAuthorizeException())
                                                 .accessDeniedHandler(new CustomAccessDeniedException()))
                                 .authorizeHttpRequests(auth -> auth
-                                                .requestMatchers("/api/auth/register", "/api/auth/reset-password",
+                                                .requestMatchers("/api/customer/register", "/api/auth/reset-password",
                                                                 "/api/auth/forgot-password", "/api/room/all-room",
                                                                 "/api/room/get-room", "/api/room/find-all",
                                                                 "/api/auth/login", "/api/category/get-category",
