@@ -6,15 +6,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import io.swagger.v3.oas.models.Components;
-import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
+import io.swagger.v3.oas.models.OpenAPI;
 
 @Configuration
-public class OpenAPi {
+public class OpenAPIConfig {
 
         @Bean
         public OpenAPI openAPI() {
@@ -24,12 +24,12 @@ public class OpenAPi {
                                 .description("Rasa Hotel Reservation");
 
                 Contact contact = new Contact()
-                                .email("info@rasa.com")
+                                .email("info@rasahotel.com")
                                 .name("Admin")
-                                .url("http://rasa.com");
+                                .url("http://rasahotel.com");
 
                 License license = new License()
-                                .name("MIT Licensi")
+                                .name("MIT License")
                                 .url("http://www.mit-test.com");
 
                 Info info = new Info()
@@ -44,7 +44,7 @@ public class OpenAPi {
                                 .bearerFormat("JWT")
                                 .scheme("bearer");
 
-                return new OpenAPI().components(
+                return new io.swagger.v3.oas.models.OpenAPI().components(
                                 new Components().addSecuritySchemes("Bearer Authentication", securityScheme)).info(info)
                                 .servers(List.of(server));
         }

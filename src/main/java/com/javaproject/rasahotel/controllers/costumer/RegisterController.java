@@ -31,7 +31,6 @@ public class RegisterController {
     @Autowired
     CustomerService costumerService;
 
-    @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping("/register")
     public ResponseEntity<Object> register(@RequestBody CostumerRequestDto dto) {
         try {

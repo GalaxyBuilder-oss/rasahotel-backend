@@ -38,10 +38,9 @@ public class CustomerServicelmpl implements CustomerService {
     public Customer register(CostumerRequestDto dto) {
         try {
 
-            List<Customer> customers = customerRepository.findAll().stream()
-                    .filter(data -> data.getEmail().equalsIgnoreCase(dto.getEmail())).map(n -> n).toList();
+            Customer c = customerRepository.findByEmail(dto.getEmail()).orElse(null);
 
-            if (customers == null)
+            if (!(c == null))
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email was registered");
 
             Customer customer = new Customer();
