@@ -16,7 +16,7 @@ Versi sebelum `1.0.0` tidak lagi menerima patch keamanan.
 
 Jika Anda menemukan kerentanan dalam proyek ini, **harap JANGAN langsung membuka isu GitHub**. Demi keamanan pengguna lain:
 
-1. Kirim email ke **galaxybuilder.oss@protonmail.com** (ganti dengan email kamu).
+1. Kirim email ke **galaxybuilder.oss@gmail.com** (ganti dengan email kamu).
 2. Gunakan subjek: `[SECURITY] RasaHotel Vulnerability`.
 3. Sertakan detail eksploitasi, bukti konsep, dan langkah reproduksi.
 
