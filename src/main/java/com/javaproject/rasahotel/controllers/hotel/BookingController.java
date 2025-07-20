@@ -115,9 +115,9 @@ public class BookingController {
         }
     }
 
-    @PostMapping("/payment")
+    @PostMapping("/payment/{confirmationCode}")
     @SecurityRequirement(name = "Bearer Authentication")
-    public ResponseEntity<Object> payment(@RequestParam(value = "enablePay", required = false) List<String> listPay, @RequestParam String confirmationCode) {
+    public ResponseEntity<Object> payment(@RequestParam(value = "enablePay", required = false) List<String> listPay, @PathVariable String confirmationCode) {
 
         try {
 

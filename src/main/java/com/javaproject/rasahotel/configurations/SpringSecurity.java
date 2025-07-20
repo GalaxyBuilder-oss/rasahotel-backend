@@ -60,7 +60,7 @@ public class SpringSecurity {
                                                                 "/api/auth/delete-user")
                                                 .hasAuthority(RoleConstant.ADMIN_ROLE)
                                                 .requestMatchers("/api/booking/save-booking/**",
-                                                                "/api/booking/get-by-email", "/api/booking/payment",
+                                                                "/api/booking/get-by-email", "/api/booking/payment/**",
                                                                 "/api/booking/payment-success",
                                                                 "/api/booking/confirmation/**")
                                                 .hasAuthority(RoleConstant.USER_ROLE)

@@ -32,6 +32,7 @@ public class RegisterController {
     CustomerService costumerService;
 
     @PostMapping("/register")
+    @SecurityRequirement(name = "Bearer Authentication")
     public ResponseEntity<Object> register(@RequestBody CostumerRequestDto dto) {
         try {
             Customer response = costumerService.register(dto);
@@ -49,8 +50,8 @@ public class RegisterController {
         }
     }
 
-    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/get-user")
+    @SecurityRequirement(name = "Bearer Authentication")
     public ResponseEntity<Object> getUser(@RequestParam String email) {
         try {
             

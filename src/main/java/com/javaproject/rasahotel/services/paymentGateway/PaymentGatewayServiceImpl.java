@@ -38,8 +38,8 @@ public class PaymentGatewayServiceImpl implements PaymentGatewayService {
         try {
 
             // daftar di mitdtrans untuk mendapatkan client key dan server key
-            Midtrans.clientKey = "SB-Mid-client-***";
-            Midtrans.serverKey = "SB-Mid-server-***";
+            Midtrans.clientKey = "SB-Mid-client-**";
+            Midtrans.serverKey = "SB-Mid-server-**";
 
             String clientKey = Midtrans.getClientKey();
 
